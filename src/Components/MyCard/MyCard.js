@@ -12,7 +12,7 @@ const MyCard = (props) => {
   },[props.addCart]);
 
   useEffect(()=>{
-    const product = JSON.parse(localStorage.getItem('fresh_shop_cart'));
+    const product = JSON.parse(localStorage.getItem('fresh_shop_cart'))| [];
     setAllProduct(product);
   },[])
  
@@ -29,7 +29,7 @@ const MyCard = (props) => {
         <li className="cart-box">
           <ul className="cart-list">
               {
-                allProduct.map((ap,index)=><SingleMyCart key={index} data={ap}></SingleMyCart> )
+                // allProduct.map((ap,index)=><SingleMyCart key={index} data={ap}></SingleMyCart> )
               }
           </ul>
         </li>
